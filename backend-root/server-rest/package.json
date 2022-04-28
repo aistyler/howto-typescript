@@ -1,0 +1,49 @@
+{
+  "name": "server-rest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register src/server.ts",
+    "build": "tsc --build ./tsconfig-build.json",
+    "start": "node build/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@my/protocol-rest": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.6.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "~src/(.*)$": "<rootDir>/src/$1",
+      "~test/(.*)$": "<rootDir>/test/$1",
+      "@my/protocol-rest": "<rootDir>/../packages/protocol-rest/src"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build/"
+    ]
+  }
+}

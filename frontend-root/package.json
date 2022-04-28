@@ -1,0 +1,22 @@
+{
+  "name": "frontend-root",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "peterhs.kang <peterhs.kang@gmail.com>",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16",
+    "jest": "^27.5.1",
+    "lerna": "^4.0.0",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "workspaces":[
+    "client-mobile",
+    "client-web",
+    "packages/*"
+  ]
+}

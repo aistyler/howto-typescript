@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "server-rest",
+    "server-socket",
+    "packages/*"
+  ],
+  "version": "0.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "exclude": [
+    "node_modules", "build", "**/*.spec.ts"
+  ],
+  // re-specify the references
+  "references": [
+    { "path": "../packages/protocol-rest" }
+  ],
+}
