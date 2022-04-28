@@ -38,5 +38,14 @@ type ReturnedUserName = ReturnType<typeof getUserName>;
 
 
 /**
- * Template
+ * `in`
  */
+type EnumUserNameFields = { first, last };
+interface EnumUserNameInterface {
+  [prop in keyof typeof EnumUserNameFields]: string;
+}
+
+type UnionUserNameFields = 'first' | 'last';
+interface UnionUserNameInterface {
+  [prop in UserNameFields]: string;
+}
