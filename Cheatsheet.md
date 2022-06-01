@@ -91,7 +91,7 @@ type UserProperties = 'firstName' | 'lastName' | 'gender' | 'picture';
 type Picture = User['picture'];
 ```
 
-#### using utils (Partial, Pick, Exclude, ...)
+## Utility Types (Partial, Pick, Exclude, ...)
 
 ```ts
 type PartialUser = Partial<User>;
@@ -125,9 +125,22 @@ type PickedUser = {
     lastName: string;
 };
 */
+
+type PictureOrUndefined = User['picture'];
+/* <==>
+type PictureOrUndefined =  {
+    path: string;
+} | undefined
+*/
+type Picture = Required<User>['picture'];
+/* <==>
+type PictureOrUndefined =  {
+    path: string;
+}
+*/
 ```
 
 ## References
 
 - [TypeScript PlayGround](https://www.typescriptlang.org/play)
-- 
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/)
